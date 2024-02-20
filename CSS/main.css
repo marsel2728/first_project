@@ -1,3 +1,11 @@
+:root {
+    --white: #ffffff; 
+     --black: #181819;
+     --grey: #9999A0;
+     --light-grey: #E8EAEF;
+}
+
+
 * {
     box-sizing: border-box;
 }
@@ -13,11 +21,24 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: 15px;
-    color: #181819;
+    color: var(--black);
+    background: var(--white);
 }
 
 a {
     text-decoration: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+#app {
+    width: 100%;
+    position: relative;
+    min-height: 100vh;
 }
 
 .container {
@@ -29,6 +50,8 @@ a {
 
 .header {
     width: 100%;
+    box-shadow: 1px 4px 10px 0 rgba(0, 0, 0, .15);
+    background: var(--white);
 }
 
 .header-top {
@@ -121,19 +144,19 @@ object-position: center;
 }
 
 .lang ul li a {
-    color: #9999A0;
+    color: var(--grey);
     transition: .3s;
 }
 
 .lang ul li a:hover {
-    color: #181819;
+    color: var(--black);
 }
 
 
 .bottom-header {
     width: 100%;
     padding: 22px 0;
-    border-top: 1px solid #E8EAEF
+    border-top: 1px solid var(--light-grey);
 }
 
 
@@ -167,7 +190,7 @@ object-position: center;
     position: absolute;
     width: 3px;
     height: 3px;
-    background: #181819;
+    background: var(--black);
     top: 50%;
     right: 0;
     border-radius: 50%;
@@ -179,10 +202,72 @@ object-position: center;
 }
 
 .menu .menu-item a {
-    color: #181819;
+    color: var(--black);
     transition: .3s ease;
 }
 
 .menu .menu-item a:hover {
-    color: #9999A0;;
+    color: var(--grey);;
+}
+
+
+.footer {
+    background: var(--black);
+    padding: 23px 0;
+}
+
+.footer .copyright {
+    position: relative;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    color: #C9CBD0;
+}
+
+.footer .copyright:before {
+    content: '';
+    width: 3px;
+    height: 3px;
+    background: #C9CBD0;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    left: -30px;
+}
+
+
+.footer .copyright::after {
+    content: '';
+    width: 3px;
+    height: 3px;
+    background: #C9CBD0;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    right: -30px;
+}
+
+
+.hero {
+    width: 100%;
+    height: 606px;
+    background: url(../img/bg_photo.png)no-repeat center center/cover;
+    position: relative;
+     
+}
+
+.hero .hero-mask {
+    width: 100%;
+    height: 100%;
+ background: linear-gradient(0deg, rgba(37,38,39,.2) 0%, rgba(37,38,39,0) 80%);
+ z-index: 1;
+}
+
+.hero .hero-pause {
+    width: 30px;
+height: 32px;
+z-index: 2;
+position: absolute;
+bottom: 40px;
+right: 96px;
 }
