@@ -24,6 +24,10 @@ body {
     color: var(--black);
     background: var(--white);
 }
+h1, h2, h3, h4, h5, h6 {
+margin: 0;
+padding: 0;
+}
 
 a {
     text-decoration: none;
@@ -278,35 +282,155 @@ right: 96px;
     padding: 60px 0 100px;
 }
 
-.h2 {
-    position: absolute;
-    width: 272px;
-height: 44px;
-left: 695px;
-right: 400px;
-top: 818px;
+.project-header {
+     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.footer .h2:before {
+.project-header h2 {
+    position: relative;
+    width: max-content;
+    text-align: center;
+    font-weight: 400;
+    font-size: 36px;
+}
+
+ .project-header h2:before {
     content: '';
     width: 3px;
     height: 3px;
     background: var(--black);
     border-radius: 50%;
     position: absolute;
-    top: 31px;
-    left: -27px;
+    top: 20px;
+    left: -20px;
 }
 
-
-.footer .h2::after {
+ .project-header h2::after {
     content: '';
     width: 3px;
     height: 3px;
     background: var(--black);
     border-radius: 50%;
     position: absolute;
-    top: 33px;
-    right: 52px;
+    top: 20px;
+    right: -20px;
+}
+
+
+.project-list {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(271px, 1fr));
+    grid-gap: 20px 30px;
+}
+
+
+.project-item {
+    width: 100%;
+    transition: .5s ease-in-out;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.project-item:hover {
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, .2);
+}
+
+.project-item-title h3 {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--black);
+    text-align: center;
+    padding: 15px 0;
+}
+
+.project-item-title h3 a {
+    color: var(--black);
+    transition: .3s ease-in-out;
+}
+
+.project-item-title h3 a:hover {
+    color: var(--grey);
+}
+
+.project-item-image {
+    display: block;
+    width: 100%;
+    height: 292px;
+    overflow: hidden;
+}
+
+
+.project-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: .5s ease;
+}
+
+.project-item-image:hover img {
+    transform: scale(1.2);
+}
+
+
+.text {
+    width: 100%;
+    padding: 100px 0 65px;
+}
+
+.text .text-wrapper {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.text h2 {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 44px;
+    text-align: center;
+    padding-bottom: 40px;
+    color: var(--black);
+}
+
+.text p {
+    padding-bottom: 30px;
+    text-align: justify;
+}
+
+.text-more {
+    display: flex;
+    justify-content: center;
+}
+
+.text a {
+    position: relative;
+    font-size: 14px;
+font-weight: 400;
+line-height: 17px;
+letter-spacing: 1px;
+text-align: left;
+text-transform: uppercase;
+text-decoration: dashed;
+color: var(--black);
+}
+
+
+.text a::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed var(--black);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+
+.text a:hover:after {
+    content: none;
 }
     
