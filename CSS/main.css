@@ -271,3 +271,42 @@ position: absolute;
 bottom: 40px;
 right: 96px;
 }
+
+
+.project {
+    width: 100%;
+    padding: 60px 0 100px;
+}
+
+.h2 {
+    position: absolute;
+    width: 272px;
+height: 44px;
+left: 695px;
+right: 400px;
+top: 818px;
+}
+
+.footer .h2:before {
+    content: '';
+    width: 3px;
+    height: 3px;
+    background: var(--black);
+    border-radius: 50%;
+    position: absolute;
+    top: 31px;
+    left: -27px;
+}
+
+
+.footer .h2::after {
+    content: '';
+    width: 3px;
+    height: 3px;
+    background: var(--black);
+    border-radius: 50%;
+    position: absolute;
+    top: 33px;
+    right: 52px;
+}
+    
